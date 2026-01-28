@@ -1,0 +1,14 @@
+{
+    "name": "personal/himuon-add-to-cart-anywhere",
+    "autoload": {
+        "psr-4": {
+            "Himuon\\ATCA\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Reagan Mahinay"
+        }
+    ],
+    "require": {}
+}
