@@ -1,15 +1,15 @@
 # Himuon – Add to Cart Anywhere (Impreza Extension)
 
-[![Video walkthrough](https://img.youtube.com/vi/WAlNuwV6fF0/0.jpg)](https://www.youtube.com/watch?v=WAlNuwV6fF0)
+[![Video walkthrough](http://reagandev.com/wp-content/uploads/2026/01/add-to-cart-anywhere-impreza-theme-extension.jpg)](https://www.youtube.com/watch?v=WAlNuwV6fF0)
 
 ## Overview
-Himuon – Add to Cart Anywhere is a WordPress plugin that adds a custom Impreza/US Builder element for embedding a WooCommerce add-to-cart form anywhere on a page by specifying a product ID. It wires into Impreza’s element registry and template search paths, then renders WooCommerce’s native add-to-cart template with optional quantity button styling and button labeling controls. 【F:himuon-add-to-cart-anywhere.php†L1-L26】【F:src/Init.php†L11-L49】【F:us-addon/config/elements/himuon_add_to_cart.php†L1-L66】【F:us-addon/templates/elements/himuon_add_to_cart.php†L1-L117】
+Himuon – Add to Cart Anywhere is a WordPress plugin that adds a custom Impreza/US Builder element for embedding a WooCommerce add-to-cart form anywhere on a page by specifying a product ID. It wires into Impreza’s element registry and template search paths, then renders WooCommerce’s native add-to-cart template with optional quantity button styling and button labeling controls.
 
 ## Features
-- Adds a **Himuon - Add To Cart Anywhere** element to the Impreza/US Builder “Basic” category. 【F:us-addon/config/elements/himuon_add_to_cart.php†L10-L14】
-- Renders WooCommerce’s add-to-cart form for a specific product ID, including pricing output. 【F:us-addon/templates/elements/himuon_add_to_cart.php†L12-L83】【F:us-addon/templates/elements/himuon_add_to_cart.php†L90-L117】
-- Provides optional label overrides for add-to-cart buttons. 【F:us-addon/templates/elements/himuon_add_to_cart.php†L71-L109】
-- Supports quantity button styling controls (style and size), plus optional full-width button and size settings. 【F:us-addon/config/elements/himuon_add_to_cart.php†L24-L66】【F:us-addon/templates/elements/himuon_add_to_cart.php†L15-L62】
+- Adds a **Himuon - Add To Cart Anywhere** element to the Impreza/US Builder “Basic” category.
+- Renders WooCommerce’s add-to-cart form for a specific product ID, including pricing output.
+- Provides optional label overrides for add-to-cart buttons.
+- Supports quantity button styling controls (style and size), plus optional full-width button and size settings
 
 ## Requirements
 - WordPress 6.9+
@@ -17,7 +17,7 @@ Himuon – Add to Cart Anywhere is a WordPress plugin that adds a custom Impreza
 - Impreza/US Builder core (`us-core`)
 - WooCommerce
 
-These requirements match the plugin headers and element registration logic. 【F:himuon-add-to-cart-anywhere.php†L6-L19】【F:us-addon/config/elements/himuon_add_to_cart.php†L14-L16】
+These requirements match the plugin headers and element registration logic.
 
 ## Installation
 1. Upload the plugin folder to your WordPress `wp-content/plugins/` directory.
@@ -35,12 +35,12 @@ These requirements match the plugin headers and element registration logic. 【F
    - **Quantity Buttons Style**: Select a style variant (0–3).
    - **Quantity Buttons Size**: Optional CSS size value for quantity buttons.
 
-These settings map to the element configuration and template rendering. 【F:us-addon/config/elements/himuon_add_to_cart.php†L12-L66】【F:us-addon/templates/elements/himuon_add_to_cart.php†L12-L62】
+These settings map to the element configuration and template rendering. 
 
 ## Behavior Notes
-- If a product ID is missing or invalid, the element shows a preview placeholder in template preview mode and an “Invalid Product” message on the front end. 【F:us-addon/templates/elements/himuon_add_to_cart.php†L26-L42】
-- The element uses WooCommerce’s `woocommerce_template_single_add_to_cart()` to ensure compatibility with product types and stock rules. 【F:us-addon/templates/elements/himuon_add_to_cart.php†L104-L105】
+- If a product ID is missing or invalid, the element shows a preview placeholder in template preview mode and an “Invalid Product” message on the front end. 
+- The element uses WooCommerce’s `woocommerce_template_single_add_to_cart()` to ensure compatibility with product types and stock rules. 
 
 ## Development Notes
-- The plugin registers its element by extending Impreza’s shortcode configuration and grid settings, and adds the `us-addon/` directory to the theme’s template search paths. 【F:src/Init.php†L13-L49】
-- Element configuration lives at `us-addon/config/elements/himuon_add_to_cart.php` and the render template lives at `us-addon/templates/elements/himuon_add_to_cart.php`. 【F:us-addon/config/elements/himuon_add_to_cart.php†L1-L66】【F:us-addon/templates/elements/himuon_add_to_cart.php†L1-L117】
+- The plugin registers its element by extending Impreza’s shortcode configuration and grid settings, and adds the `us-addon/` directory to the theme’s template search paths.
+- Element configuration lives at `us-addon/config/elements/himuon_add_to_cart.php` and the render template lives at `us-addon/templates/elements/himuon_add_to_cart.php`.
